@@ -42,3 +42,15 @@
 ## Welcome Page
 + [스프링 부트가 제공하는 Welcome Page 기능](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-%20features.html#boot-features-spring-mvc-welcome-page)
 + static/index.html 을 올려두면 Welcome page 기능을 제공
+
+## MVC와 템플릿 엔진
++ MVC : Model, View, Controller
++ @RequestParam 
+  + 페이지(데이터) 호출시 매개변수
+  + 값이 없으면 오류 발생. required=false
++ viewResolver : 정적 페이지
++ @ResponseBody 
+  + viewResolver 대신에 HttpMessageConverter가 동작(JSON or String convert)
+  + 데이터 리턴시 필수 어노테이션
+  + 기본은 JSON 방식 return(key : value)
+  + 클라이언트의 HTTP Accept 헤더 + 서버의 컨트롤러 반환 타입 정보 => 리턴 타입 선택
